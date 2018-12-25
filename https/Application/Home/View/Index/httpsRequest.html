@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Https Request</title>
+</head>
+<body>
+<?php
+    /*
+    curl_setopt() Set an option for a cURL transfer
+    bool curl_setopt ( resource $ch , int $option , mixed $value )
+    CURLOPT_SSL_VERIFYPEER:
+    FALSE to stop cURL from verifying the peer's certificate.
+    Alternate certificates to verify against can be specified with the CURLOPT_CAINFO option or
+    a certificate directory can be specified with the CURLOPT_CAPATH option.
+    CURLOPT_SSL_VERIFYHOST:
+    1 to check the existence of a common name in the SSL peer certificate.
+    2 to check the existence of a common name and also verify that it matches the hostname provided.
+	0 to not check the names.
+	In production environments the value of this option should be kept at 2 (default value).
+    */
+    function curl_get_https($url)
+    {
+        $curl = curl_init();
+        curl_setopt($curl,CURLOPT_URL,$url);//The URL to fetch
+        curl_setopt($curl,CURLOPT_HEADER,false);//TRUE to include the header in the output.
+        curl_setopt($curl,CURLOPT_RETURNTRANSFER,false);//TRUE to return the transfer as a string of the return value of curl_exec() instead of outputting it directly.
+        curl_setopt($curl,CURLOPT_SSL_VERIFYPEER,false);//skip inspect
+        curl_setopt($curl,CURLOPT_SSL_VERIFYHOST,2);//skip inspect
+        $tempInfo = curl_exec($curl);//execuate $curl
+        curl_close($curl);
+        return $tempInfo;//return json object
+    }
+    $url = "https://www.baidu.com";
+    $result = curl_get_https($url);//Closes a cURL session and frees all resources. The cURL handle, ch, is also deleted
+    var_dump($result);
+?>
+
+</body>
+</html>
