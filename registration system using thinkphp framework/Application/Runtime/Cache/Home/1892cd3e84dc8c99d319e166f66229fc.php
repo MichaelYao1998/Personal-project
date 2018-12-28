@@ -1,5 +1,5 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title> Register page</title>
     <link rel="stylesheet" type="text/css" href="/Public/CSS/style.css">
@@ -18,7 +18,7 @@
 
     <div class="input-group">
         <label>Password</label>
-        <input type="password" name="password_regis">
+        <input type="password" name="password">
     </div>
 
     <div class="input-group">

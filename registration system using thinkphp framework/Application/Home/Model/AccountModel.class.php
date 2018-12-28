@@ -18,5 +18,13 @@ class AccountModel extends Model
         'DB_PWD'    => 'root', //密码
         'DB_PORT'   => 3306, //端口
     );
+    public function exists($username){
+        $SQL="username='%s'";
+        return $this->where($SQL,$username)->find();
+    }
+    public function exist($email){
+        $SQL="email='%s'";
+        return $this->where($SQL,$email)->find();
+    }
 }
 ?>

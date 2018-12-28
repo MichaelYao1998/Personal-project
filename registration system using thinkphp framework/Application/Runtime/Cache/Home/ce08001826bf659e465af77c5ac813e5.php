@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 <head>
     <title>Login page</title>
-    <link rel="stylesheet" type="text/css" href="__PUBLIC__/CSS/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/Public/CSS/style.css"/>
 </head>
 <body>
 <div class="header">
@@ -13,7 +13,7 @@
     <?php include('errors.php'); ?>
     <div class="input-group">
         <label>Username</label>
-        <input type="text" name="userInfo" placeholder="Username or email address">
+        <input type="text" name="userInfo" placeholder="Username or email address" >
     </div>
 
     <div class="input-group">
@@ -29,7 +29,7 @@
     </p>
 </form>
 <p id="error">
-    {$errMessage}
+    <?php echo ($errMessage); ?>
 </p>
 </body>
 </html>
