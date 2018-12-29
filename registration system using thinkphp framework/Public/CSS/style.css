@@ -1,58 +1,77 @@
 * {
-  margin: 0px;
-  padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 body {
-  font-size: 120%;
-  background: #F8F8FF;
+    background:#2d3b36 url(background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top:25px;
+    padding-left: 30px;
 }
 
 .header {
-  width: 30%;
-  margin: 50px auto 0px;
-  color: white;
-  background: #5F9EA0;
-  text-align: center;
-  border: 1px solid #B0C4DE;
-  border-bottom: none;
-  border-radius: 10px 10px 0px 0px;
-  padding: 20px;
+    width: 30%;
+    margin: 50px auto 0;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    border: 2px solid #000000 ;
+    border-bottom: none;
+    border-radius: 10px 10px 10px 10px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
 }
 form, .content {
-  width: 30%;
-  margin: 0px auto;
-  padding: 20px;
-  border: 1px solid #B0C4DE;
-  background: white;
-  border-radius: 0px 0px 10px 10px;
+    width: 30%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid ;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
 }
 .input-group {
-  margin: 10px 0px 10px 0px;
+    margin: 10px 0 10px 0;
 }
 .input-group label {
-  display: block;
-  text-align: left;
-  margin: 3px;
+    display: block;
+    text-align: left;
+    margin: 3px;
+    color: rgba(255,255,255,255);
+    font-weight: bold;
 }
 .input-group input {
-  height: 30px;
-  width: 93%;
-  padding: 5px 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid gray;
+    height: 30px;
+    width: 93%;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-family: 'Source Sans Pro', sans-serif;
+    background: rgba(255, 255, 255, 0.4);
+    color: #FFFFFF;
 }
+#input-ph::-webkit-input-placeholder{
+    color: #FFFFFF;
+    text-align: center;
+}
+
 .btn {
-  padding: 10px;
-  font-size: 15px;
-  color: white;
-  background: #5F9EA0;
-  border: none;
-  border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+    color: white;
+    background: #5F9EA0;
+    border: none;
+    border-radius: 5px;
+}
+
+#message{
+    color: #FFFFFF;
 }
 
 #error {
-  color: #a94442;
-  text-align: center;
+    color: #a94442;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
 }
-

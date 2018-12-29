@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bc08efe-835a-4de9-87ca-3a0fcdde0438" name="默认的" comment="">
+      <change afterPath="$PROJECT_DIR$/Public/CSS/background.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/composerJson.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/php.xml" beforeDir="false" />
@@ -11,8 +12,12 @@
       <change beforePath="$PROJECT_DIR$/../https/Application/Home/View/Index/httpsRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/../https/Application/Home/View/Index/httpsRequest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../https/Application/Runtime/Cache/Home/30a2d87dba75c49421d1c80e854620d0.php" beforeDir="false" afterPath="$PROJECT_DIR$/../https/Application/Runtime/Cache/Home/30a2d87dba75c49421d1c80e854620d0.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Home/Controller/ApplicationController.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Home/Controller/ApplicationController.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Home/View/Application/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Home/View/Application/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Home/View/Application/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Home/View/Application/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/1892cd3e84dc8c99d319e166f66229fc.php" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/1892cd3e84dc8c99d319e166f66229fc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/ce08001826bf659e465af77c5ac813e5.php" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/ce08001826bf659e465af77c5ac813e5.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Application/Runtime/Logs/Home/18_12_29.log" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Runtime/Logs/Home/18_12_29.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/CSS/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Public/CSS/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,11 +47,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/Controller/ApplicationController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="75" column="16" lean-forward="true" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
+            <state relative-caret-position="203">
+              <caret line="74" column="33" lean-forward="true" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="33" />
               <folding>
                 <element signature="e#125#146#0#PHP" expanded="true" />
               </folding>
@@ -57,8 +62,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/View/Application/register.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="20" column="45" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="45" />
+            <state relative-caret-position="325">
+              <caret line="38" column="7" lean-forward="true" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -66,26 +71,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/View/Application/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="20" column="45" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="45" />
+            <state relative-caret-position="97">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Public/CSS/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="760">
-              <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Home/Model/AccountModel.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+            <state relative-caret-position="361">
+              <caret line="31" column="1" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -130,18 +126,18 @@
         <option value="$PROJECT_DIR$/Application/Home/Conf/config.php" />
         <option value="$PROJECT_DIR$/Application/Common/Conf/config.php" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/ServerController.class.php" />
-        <option value="$PROJECT_DIR$/Public/CSS/style.css" />
         <option value="$PROJECT_DIR$/Public/README.md" />
         <option value="$PROJECT_DIR$/Application/Home/Model/AccountModel.php" />
         <option value="$PROJECT_DIR$/Application/Home/View/Index/register.html" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/View/Application/test.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Application/register.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Index/login.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Application/login.html" />
         <option value="$PROJECT_DIR$/Application/Home/Model/AccountModel.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/ApplicationController.class.php" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Application/register.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Application/login.html" />
+        <option value="$PROJECT_DIR$/Public/CSS/style.css" />
       </list>
     </option>
   </component>
@@ -198,6 +194,12 @@
               <item name="registration system using thinkphp framework" type="462c0819:PsiDirectoryNode" />
               <item name="Public" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="registration system using thinkphp framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="registration system using thinkphp framework" type="462c0819:PsiDirectoryNode" />
+              <item name="Public" type="462c0819:PsiDirectoryNode" />
+              <item name="CSS" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -214,18 +216,19 @@
     <property name="settings.editor.selected.configurable" value="SQL Dialects" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\temporary folder\Personal-project\registration system using thinkphp framework\Public\CSS" />
+      <recent name="D:\temporary folder\Personal-project\registration system using thinkphp framework\Application\Home\View\Application" />
+      <recent name="D:\webroot\regis\Application\Home\Controller" />
+      <recent name="D:\webroot\regis\Application\Home\View\Index" />
+      <recent name="D:\webroot\regis\Application\Home\View" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\webroot\regis\Application\Home\Controller" />
       <recent name="D:\webroot\regis\Admin\Controller" />
       <recent name="D:\webroot\regis\Public\CSS" />
       <recent name="D:\webroot\regis\Application\Home\View\Index" />
       <recent name="D:\webroot\regis\Public" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\temporary folder\Personal-project\registration system using thinkphp framework\Application\Home\View\Application" />
-      <recent name="D:\webroot\regis\Application\Home\Controller" />
-      <recent name="D:\webroot\regis\Application\Home\View\Index" />
-      <recent name="D:\webroot\regis\Application\Home\View" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -261,12 +264,12 @@
       <workItem from="1545783397744" duration="9775000" />
       <workItem from="1545874181298" duration="13071000" />
       <workItem from="1545956468068" duration="27049000" />
-      <workItem from="1546044170748" duration="9807000" />
+      <workItem from="1546044170748" duration="22234000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141630000" />
+    <option name="totallyTimeSpent" value="154057000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -281,11 +284,11 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49746192" visible="true" weight="0.23676248" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49746192" visible="true" weight="0.23676248" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5025381" side_tool="true" weight="0.20196672" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32993197" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32879046" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -295,7 +298,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.09028961" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.12606473" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.32993197" />
       <window_info anchor="bottom" id="运行" order="13" />
       <window_info anchor="bottom" id="调试" order="14" />
@@ -402,16 +405,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="304">
-            <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -432,20 +425,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Index/login.html" />
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php" />
-    <entry file="file://$PROJECT_DIR$/Public/CSS/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Application/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="20" column="45" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Model/AccountModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -453,20 +432,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="76">
+            <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/CSS/background.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Application/register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="45" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="45" />
+        <state relative-caret-position="325">
+          <caret line="38" column="7" lean-forward="true" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Application/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/ApplicationController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="75" column="16" lean-forward="true" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
+        <state relative-caret-position="203">
+          <caret line="74" column="33" lean-forward="true" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="33" />
           <folding>
             <element signature="e#125#146#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/CSS/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="31" column="1" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
         </state>
       </provider>
     </entry>
