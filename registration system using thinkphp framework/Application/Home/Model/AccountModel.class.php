@@ -22,9 +22,5 @@ class AccountModel extends Model
         $SQL="username='%s'";
         return $this->where($SQL,$username)->find();
     }
-    public function exist($email){
-        $SQL="email='%s'";
-        return $this->where($SQL,$email)->find();
-    }
 }
 ?>

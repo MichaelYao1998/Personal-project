@@ -20,7 +20,6 @@ class ApplicationController extends Controller
             $userModel = D('Account');
             $userModel->create();
             $username = $userModel->username;
-            $user = $userModel->where(['username' => $username])->find();
             $result = $userModel->exists($username);
             $pwd = I('post.password_2');
             $password = $userModel->password;
@@ -62,19 +61,18 @@ class ApplicationController extends Controller
         try {
             if (isset($_POST['login_user'])) {
                 $accountModel = D("Account");
-                $username = $accountModel->username;
-                $user = $accountModel->where(['userInfo' => $username])->find();
                 $userAccount = I('post.userInfo');
                 $pwd = I('post.password');
                 $email = $accountModel->getField('email', true);
-                $checkSQL['email']=$userAccount;
+                $username = $accountModel->getField('username', true);
+                $checkSQL['email'] = $userAccount;
+                $checkSql['username'] = $userAccount;
                 $password = $accountModel->where($checkSQL)->getField('password', true);
-                $finalPwd=implode(" ",$password);
-                var_dump($password);
-                var_dump($pwd);
-                var_dump($finalPwd);
-                if (in_array($userAccount, $email)) {
-                    if ($pwd==$finalPwd) {
+                $EmailPwd = implode(" ", $password);
+                $pass = $accountModel->where($checkSql)->getField('password', true);
+                $userPwd = implode(" ", $pass);
+                if (in_array($userAccount, $email) || in_array($userAccount, $username)) {
+                    if ($pwd == $EmailPwd || $pwd == $userPwd) {
                         $this->success("redirect successful","test");
                     } else {
                         throw new Exception("Password does not match");

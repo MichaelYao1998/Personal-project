@@ -10,6 +10,8 @@
       <change beforePath="$PROJECT_DIR$/../https/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../https/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../https/Application/Home/View/Index/httpsRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/../https/Application/Home/View/Index/httpsRequest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../https/Application/Runtime/Cache/Home/30a2d87dba75c49421d1c80e854620d0.php" beforeDir="false" afterPath="$PROJECT_DIR$/../https/Application/Runtime/Cache/Home/30a2d87dba75c49421d1c80e854620d0.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Home/Controller/ApplicationController.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Home/Controller/ApplicationController.class.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,8 +44,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/Home/Controller/ApplicationController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12">
-              <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
+            <state relative-caret-position="390">
+              <caret line="81" column="61" selection-start-line="81" selection-start-column="61" selection-end-line="81" selection-end-column="61" />
               <folding>
                 <element signature="e#125#146#0#PHP" expanded="true" />
               </folding>
@@ -63,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/View/Application/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="83" selection-start-line="15" selection-start-column="83" selection-end-line="15" selection-end-column="83" />
+            <state relative-caret-position="209">
+              <caret line="20" column="45" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -257,12 +259,12 @@
       <workItem from="1545783397744" duration="9775000" />
       <workItem from="1545874181298" duration="13071000" />
       <workItem from="1545956468068" duration="27049000" />
-      <workItem from="1546044170748" duration="450000" />
+      <workItem from="1546044170748" duration="4164000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132273000" />
+    <option name="totallyTimeSpent" value="135987000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -275,6 +277,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49746192" visible="true" weight="0.23676248" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -290,7 +293,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.48892674" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.051107325" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.32993197" />
       <window_info anchor="bottom" id="运行" order="13" />
       <window_info anchor="bottom" id="调试" order="14" />
@@ -427,27 +430,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Index/login.html" />
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php" />
-    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/ApplicationController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12">
-          <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
-          <folding>
-            <element signature="e#125#146#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Application/register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Application/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="83" selection-start-line="15" selection-start-column="83" selection-end-line="15" selection-end-column="83" />
         </state>
       </provider>
     </entry>
@@ -462,6 +448,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Application/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="20" column="45" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/ApplicationController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="81" column="61" selection-start-line="81" selection-start-column="61" selection-end-line="81" selection-end-column="61" />
+          <folding>
+            <element signature="e#125#146#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
