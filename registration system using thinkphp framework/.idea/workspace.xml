@@ -12,6 +12,7 @@
       <change beforePath="$PROJECT_DIR$/../https/Application/Runtime/Cache/Home/30a2d87dba75c49421d1c80e854620d0.php" beforeDir="false" afterPath="$PROJECT_DIR$/../https/Application/Runtime/Cache/Home/30a2d87dba75c49421d1c80e854620d0.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Application/Home/Controller/ApplicationController.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Home/Controller/ApplicationController.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Runtime/Logs/Home/18_12_29.log" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Runtime/Logs/Home/18_12_29.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,8 +45,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/Home/Controller/ApplicationController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="81" column="61" selection-start-line="81" selection-start-column="61" selection-end-line="81" selection-end-column="61" />
+            <state relative-caret-position="265">
+              <caret line="75" column="16" lean-forward="true" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
               <folding>
                 <element signature="e#125#146#0#PHP" expanded="true" />
               </folding>
@@ -56,8 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/View/Application/register.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+            <state relative-caret-position="380">
+              <caret line="20" column="45" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -83,8 +84,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/Model/AccountModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+            <state relative-caret-position="304">
+              <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -101,6 +102,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>userAccount</find>
+      <find>exist</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -137,8 +139,8 @@
         <option value="$PROJECT_DIR$/Application/Home/View/Application/test.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Application/register.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Index/login.html" />
-        <option value="$PROJECT_DIR$/Application/Home/Model/AccountModel.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/View/Application/login.html" />
+        <option value="$PROJECT_DIR$/Application/Home/Model/AccountModel.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/ApplicationController.class.php" />
       </list>
     </option>
@@ -259,12 +261,12 @@
       <workItem from="1545783397744" duration="9775000" />
       <workItem from="1545874181298" duration="13071000" />
       <workItem from="1545956468068" duration="27049000" />
-      <workItem from="1546044170748" duration="4164000" />
+      <workItem from="1546044170748" duration="9807000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135987000" />
+    <option name="totallyTimeSpent" value="141630000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -293,7 +295,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.051107325" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.09028961" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.32993197" />
       <window_info anchor="bottom" id="运行" order="13" />
       <window_info anchor="bottom" id="调试" order="14" />
@@ -430,24 +432,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Index/login.html" />
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php" />
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Application/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/CSS/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="760">
           <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Model/AccountModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -458,10 +446,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Model/AccountModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Application/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="45" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/ApplicationController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="81" column="61" selection-start-line="81" selection-start-column="61" selection-end-line="81" selection-end-column="61" />
+        <state relative-caret-position="265">
+          <caret line="75" column="16" lean-forward="true" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
           <folding>
             <element signature="e#125#146#0#PHP" expanded="true" />
           </folding>

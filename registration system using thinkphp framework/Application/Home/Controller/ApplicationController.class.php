@@ -28,6 +28,7 @@ class ApplicationController extends Controller
             try {
                 if (empty($result)) {
                     if ($pwd == $password) {
+                        $userModel->password = md5($userModel->password);
                     } else {
                         throw new Exception('Password does not match');
                     }
@@ -71,9 +72,10 @@ class ApplicationController extends Controller
                 $EmailPwd = implode(" ", $password);
                 $pass = $accountModel->where($checkSql)->getField('password', true);
                 $userPwd = implode(" ", $pass);
+                $pwd = md5($pwd);
                 if (in_array($userAccount, $email) || in_array($userAccount, $username)) {
                     if ($pwd == $EmailPwd || $pwd == $userPwd) {
-                        $this->success("redirect successful","test");
+                        $this->success("redirect successful", "test");
                     } else {
                         throw new Exception("Password does not match");
                     }
