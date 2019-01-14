@@ -6,5 +6,12 @@
  * Time: 16:05
  */
 use \app\controllers\WeatherController;
-WeatherController::getData();
+?>
+<head>
+    <title>
+        Display information
+    </title>
+</head>
+<?php
+	echo WeatherController::getData();
 ?>

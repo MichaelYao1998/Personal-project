@@ -1,11 +1,15 @@
 <?php
 /**
  * Created alt=" " by PhpStorm.
- * User: Administrator
+ * User: Yuchen Yao
  * Date: 2019/1/9
  * Time: 11:59
  */
 
+/*
+ * https://www.cnblogs.com/open88/p/7343983.html
+ * 数据的调用参考阿里云
+ */
 namespace app\controllers;
 
 use app\models\Weather;
@@ -39,7 +43,7 @@ class WeatherController extends Controller
     static public function getData()
     {
         $host = "https://ali-weather.showapi.com";
-        $path = "/area-to-id";
+        $path = "/area-to-weather";
         $method = "GET";
         $appcode = "371c81cea7784fcfac15d67ccb9dde0a";
         $headers = array();
@@ -60,15 +64,18 @@ class WeatherController extends Controller
             curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
             curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
         }
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $bodys);
         $response = curl_exec($curl);
-        var_dump($response);
-//$response = $response;
-//echo "<img src=" . $response->showapi_res_body->f1->day_weather_pic . " /><br>";
-//echo "city:  " . $response->showapi_res_body->cityInfo->c5 . "<br>";
-//echo "Morning weather:  " . $response->showapi_res_body->f1->day_weather . "<br>";
-//echo "Evening weather:  " . $response->showapi_res_body->f1->night_weather . "<br>";
-//echo "Lowest temperature:  " . $response->showapi_res_body->f1->night_air_temperature . "<br>";
-//echo "Highest temperature:  " . $response->showapi_res_body->f1->day_air_temperature . "<br>";
-//echo "PM2.5:  " . $response->showapi_res_body->now->aqiDetail->pm2_5 . " " . $response->showapi_res_body->now->aqiDetail->quality . "<br>";
+        $header_size = curl_getinfo($curl, CURLINFO_HEADER_SIZE);
+        $headers        = substr($response, 0, $header_size);
+        $body    = substr($response, $header_size);
+        $weather=json_decode($body);
+        echo  "<img src=".$weather->showapi_res_body->f1->day_weather_pic." /><br>";
+        echo  "城市：  ".$weather->showapi_res_body->cityInfo->c5."<br/>";
+        echo  "白天天气：  ".$weather->showapi_res_body->f1->day_weather."<br/>";
+        echo  "晚上天气：  ".$weather->showapi_res_body->f1->night_weather."<br/>";
+        echo  "最低温度：  ".$weather->showapi_res_body->f1->night_air_temperature."<br/>";
+        echo  "最高温度：  ".$weather->showapi_res_body->f1->day_air_temperature."<br/>";
+        echo  "PM2.5：  ".$weather->showapi_res_body->now->aqiDetail->pm2_5." ".$weather->showapi_res_body->now->aqiDetail->quality."<br/>";
     }
 }
