@@ -200,6 +200,10 @@ class AccountController extends Controller
         ]);
     }
 
+    /*
+     *  Perform download as csv function
+     *  Reference link: https://blog.csdn.net/qq_35296546/article/details/70226678
+     */
     public function actionDownload()
     {
         $name = Yii::$app->request->get('username');
@@ -241,6 +245,13 @@ class AccountController extends Controller
         echo $formValue;
     }
 
+    /*
+     * Perform download as pdf file function
+     */
+    public function actionDownloadPdf(){
+
+    }
+
     public function actionSeekpass()
     {
         $model = new Account();
@@ -259,7 +270,7 @@ class AccountController extends Controller
     public function actionChangepass()
     {
         $model = new Account();
-        /*//接收时间戳
+        //接收时间戳
         $time = Yii::$app->request->get("timestamp");
         //接收用户名
         $adminuser = Yii::$app->request->get("username");
@@ -284,13 +295,13 @@ class AccountController extends Controller
             } catch (ExitException $e) {
             }
         }
-        if(Yii::$app->request->isPost){
-            $post=Yii::$app->request->post();
-            if($model->changePass($post)){
-                Yii::$app->session->setFlash("info","change password successfully");
+        if (Yii::$app->request->isPost) {
+            $post = Yii::$app->request->post();
+            if ($model->changePass($post)) {
+                Yii::$app->session->setFlash("info", "change password successfully");
             }
         }
-        $model ->username =$adminuser;*/
+        $model->username = $adminuser;
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             return $this->redirect(['welcome']);
         } else {

@@ -20,8 +20,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
         <?= Html::a('Create Account', ['create'], ['class' => 'btn btn-success']) ?>&emsp14;&emsp14;
-        <?= HTML::a('Download as csv',['download'],['class'=>'btn btn-success'])?>
-<!--        download as csv: https://blog.csdn.net/qq_35296546/article/details/70226678-->
+        <?= HTML::a('Download as csv',['download'],['class'=>'btn btn-success'])?>&emsp14;&emsp14;
+        <?= HTML::a('Download as pdf',['download-pdf'],['class'=>'btn btn-success'])?>
     </p>
 
 

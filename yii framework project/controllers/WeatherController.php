@@ -83,12 +83,6 @@ class WeatherController extends Controller
         $headers = substr($response, 0, $header_size);
         $body = substr($response, $header_size);
         $weather = json_decode($body);
-        echo "<img src=" . $weather->showapi_res_body->f1->day_weather_pic . " /><br>";
-        echo "城市：  " . $weather->showapi_res_body->cityInfo->c5 . "<br/>";
-        echo "白天天气：  " . $weather->showapi_res_body->f1->day_weather . "<br/>";
-        echo "晚上天气：  " . $weather->showapi_res_body->f1->night_weather . "<br/>";
-        echo "最低温度：  " . $weather->showapi_res_body->f1->night_air_temperature . "<br/>";
-        echo "最高温度：  " . $weather->showapi_res_body->f1->day_air_temperature . "<br/>";
-        echo "PM2.5：  " . $weather->showapi_res_body->now->aqiDetail->pm2_5 . " " . $weather->showapi_res_body->now->aqiDetail->quality . "<br/>";
+        return $weather;
     }
 }

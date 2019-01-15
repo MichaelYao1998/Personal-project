@@ -1,6 +1,7 @@
 <?php
 
 /* @var $this \yii\web\View */
+
 /* @var $content string */
 
 use app\widgets\Alert;
@@ -41,8 +42,10 @@ AppAsset::register($this);
             ['label' => 'Home', 'url' => ['/site/index']],
             ['label' => 'About', 'url' => ['/site/about']],
             ['label' => 'Contact', 'url' => ['/site/contact']],
+            ['label' => 'Weather', 'url' => ['/weather/forecast']],
+            ['label' => 'Database', 'url' => ['account/index']],
             Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/account/login']]
+            ['label' => 'Login', 'url' => ['/account/login']]
             ) : (
                 '<li>'
                 . Html::beginForm(['/site/logout'], 'post')
