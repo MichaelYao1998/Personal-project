@@ -6,10 +6,13 @@
  * Date: 2019/1/11
  * Time: 15:17
  */
-
+/*
+ * <?= $form->field($model, 'password')->passwordInput(); ?>
+<?= $form->field($model, 'password_check')->passwordInput() ?>
+ */
 /* @var $this \yii\web\View */
 /* @var $model \app\models\Account */
-$this->title = 'Update password';
+$this->title = 'Seek password';
 $this->params['breadcrumbs'][] = ['label' => 'registration', 'url' => ['login']];
 $this->params['breadcrumbs'][] = $this->title;
 
@@ -23,13 +26,12 @@ use yii\helpers\Html; ?>
         'labelOptions' => ['class' => 'col-lg-1 control-label'],
     ],
 ]); ?>
-<?= $form->field($model, 'username')->textInput(); ?>
-<?= $form->field($model, 'password')->passwordInput(); ?>
-<?= $form->field($model, 'password_check')->passwordInput() ?>
+<?= $form->field($model, 'email')->textInput(['placeholder'=>Yii::t('app','input your account name')]); ?>
+
 
 <div class="form-group">
     <div class="col-lg-offset-1 col-lg-11">
-        <?= HTML::submitButton('Update password', ['class' => 'btn btn-primary']) ?>
+        <?= HTML::submitButton('Find  back password', ['class' => 'btn btn-primary']) ?>
     </div>
 </div>
 

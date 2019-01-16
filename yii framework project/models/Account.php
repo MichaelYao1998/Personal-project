@@ -15,6 +15,7 @@ use yii\web\IdentityInterface;
  * @property string $password
  * @property string $password_check
  */
+//https://blog.csdn.net/a403852386/article/details/79429255: email related
 class Account extends \yii\db\ActiveRecord implements IdentityInterface
 {
     public $id;
@@ -37,7 +38,7 @@ class Account extends \yii\db\ActiveRecord implements IdentityInterface
         return [
             [['username', 'password', 'email', 'password_check'], 'required', 'on' => ['signUp', 'create', 'update']],
             [['username', 'email', 'password', 'password_check'], 'string', 'max' => 100],
-            [['username'], 'unique'],
+            [['username'], 'unique', 'on' => ['signUp']],
             ['password', 'passwordCheck'],
         ];
     }
@@ -113,17 +114,27 @@ class Account extends \yii\db\ActiveRecord implements IdentityInterface
 //        return $this->setPassword($password)== $this->password;
     }
 
+    public function updatePassword()
+    {
+        $model = new Account();
+        $model->password = $this->password;
+        if ($this->password == $this->password_check) {
+            $model->password = md5($model->password);
+
+        }
+        $model->save();
+    }
+
     public function seekPass($data)
     {
         if ($this->load($data) && $this->validate()) {
-            $time=time();
-            $token=$this->createToken($data['Account']['username'],$time);
-
-            $mailer = Yii::$app->mailer->compose('seekPass',['username'=>$data['Account']['username']]);
-            $mailer ->setFrom("y.aoyu.chen@163.com");//发件人
-            $mailer -> setTo($data['Account']['email']);//收件人
+            $time = time();
+            //Yii::$app->mailer->compose(): create email message
+            $mailer = Yii::$app->mailer->compose('seekpass');
+            $mailer->setFrom("y.aoyu.chen@163.com");//发件人
+            $mailer->setTo($data['Account']['email']);//收件人
             $mailer->setSubject("Find back password");
-            if($mailer->send()){
+            if ($mailer->send()) {
                 return true;
             }
         }
@@ -206,8 +217,8 @@ class Account extends \yii\db\ActiveRecord implements IdentityInterface
         return $this->auth_key === $authKey;
     }
 
-    public function changePass(array $post)
+   /* public function changePass(array $post)
     {
 
-    }
+    }*/
 }

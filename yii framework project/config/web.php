@@ -33,8 +33,8 @@ $config = [
             // for the mailer to send real emails.
             'useFileTransport' => false,
             'transport' => [
-                'class' => 'swift_SmtpTransport',
-                'host' => 'smtp163.com',//邮箱服务器地址
+                'class' => 'Swift_SmtpTransport',
+                'host' => 'smtp.163.com',//邮箱服务器地址
                 'username' => 'y.aoyu.chen@163.com',//用户名
                 'password' => 'MFys980304', //授权码
                 'port' => '465',
