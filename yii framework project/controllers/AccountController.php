@@ -253,6 +253,10 @@ class AccountController extends Controller
 
     }
 
+    /*
+     *  Perform send email function
+     * Reference: https://blog.csdn.net/a403852386/article/details/79429255
+     */
     public function actionSeekpass()
     {
         $model = new Account();
@@ -263,7 +267,7 @@ class AccountController extends Controller
             //调用model
             if ($model->seekPass($post)) {
                 Yii::$app->session->setFlash('info', 'Email sent successully, please check.');
-                Yii::$app->session->setFlash('info', "If don;t find the email, please check spam.");
+//                Yii::$app->session->setFlash('info', "If don;t find the email, please check spam.");
             }
         }
         return $this->render('seekPass', ['model' => $model]);
@@ -272,46 +276,11 @@ class AccountController extends Controller
     public function actionChangepass()
     {
         $model = new Account();
-        //接收时间戳
-        /* $time = Yii::$app->request->get("timestamp");
-         //接收用户名
-         $adminuser = Yii::$app->request->get("username");
-         //接收token
-         $token = Yii::$app->request->get("token");
-
-         $myToken = $model->createToken($adminuser, $time);
-         //验证token
-         if ($token != $myToken) {
- //            $this->redirect(['login']);
-             try {
-                 Yii::$app->end();
-             } catch (ExitException $e) {
-             }
-         }
-         //计算是否超时
-         if (time() - $time > 3000) {
-             //overtime amd direct to login page
-             $this->redirect(['login']);
-             try {
-                 Yii::$app->end();
-             } catch (ExitException $e) {
-             }
-         }
-         if (Yii::$app->request->isPost) {
-             $post = Yii::$app->request->post();
-             if ($model->changePass($post)) {
-                 Yii::$app->session->setFlash("info", "change password successfully");
-             }
-         }
-         $model->username = $adminuser;
-         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
-             return $this->redirect(['welcome']);
-         } else {*/
-        $model = new Account();
+        $model->scenario = 'change';
         if ($model->load(Yii::$app->request->post()) && $model->updatePassword()) {
-            return $this->render("welcome", ['model' => $model]);
-        }else{
-            return $this->render("changePass", ['model' => $model]);
+            return $this->redirect(['welcome']);
+        } else {
+            return $this->render('changePass', ['model' => $model]);
         }
     }
 }

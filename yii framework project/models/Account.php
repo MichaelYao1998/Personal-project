@@ -37,9 +37,11 @@ class Account extends \yii\db\ActiveRecord implements IdentityInterface
     {
         return [
             [['username', 'password', 'email', 'password_check'], 'required', 'on' => ['signUp', 'create', 'update']],
+            [['username', 'password', 'password_check'], 'required', 'on' => ['change']],
             [['username', 'email', 'password', 'password_check'], 'string', 'max' => 100],
             [['username'], 'unique', 'on' => ['signUp']],
-            ['password', 'passwordCheck'],
+            ['password', 'passwordCheck', 'on' => ['signUp', 'change']],
+            ['username', 'usernameCheck', 'on' => ['change']],
         ];
     }
 
@@ -95,6 +97,9 @@ class Account extends \yii\db\ActiveRecord implements IdentityInterface
         }
     }
 
+    /*
+     * Check whether password matches password check
+     */
     public function passwordCheck($attribute)
     {
         if ($this->password != $this->password_check) {
@@ -114,17 +119,42 @@ class Account extends \yii\db\ActiveRecord implements IdentityInterface
 //        return $this->setPassword($password)== $this->password;
     }
 
-    public function updatePassword()
+    /*
+     * check username whether in the database
+     */
+    public function usernameCheck($attribute)
     {
-        $model = new Account();
-        $model->password = $this->password;
-        if ($this->password == $this->password_check) {
-            $model->password = md5($model->password);
-
+//        $name = Yii::$app->request->get('username');
+        $user = Account::findOne(['username' => $this->username]);
+        if (!$user) {
+            $this->addError($attribute, 'username does not exist');
         }
-        $model->save();
     }
 
+    /*
+     * perform update password function
+     */
+    public function updatePassword()
+    {
+        if (!$this->validate()) {
+            return null;
+        } else {
+            $model = new Account();
+            $model->password = $this->password;
+            $model->password_check = $this->password_check;
+            if ($this->password == $this->password_check) {
+                $model->password = md5($model->password);
+                $model->password_check = md5($model->password_check);
+				//update password = $model->password where username = $this->username
+                $model::updateAll(['password' => $model->password], ['username' => $this->username]);
+                $model::updateAll(['password' => $model->password_check], ['username' => $this->username]);
+            }
+        }
+    }
+
+    /*
+     * Perform send email function
+     */
     public function seekPass($data)
     {
         if ($this->load($data) && $this->validate()) {
@@ -217,8 +247,4 @@ class Account extends \yii\db\ActiveRecord implements IdentityInterface
         return $this->auth_key === $authKey;
     }
 
-   /* public function changePass(array $post)
-    {
-
-    }*/
 }
