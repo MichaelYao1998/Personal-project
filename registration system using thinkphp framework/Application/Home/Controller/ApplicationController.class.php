@@ -29,6 +29,7 @@ class ApplicationController extends Controller
                 if (empty($result)) {
                     if ($pwd == $password) {
                         $userModel->password = md5($userModel->password);
+                        $userModel->password_check = md5($userModel->password_check);
                     } else {
                         throw new Exception('Password does not match');
                     }
@@ -64,14 +65,14 @@ class ApplicationController extends Controller
                 $accountModel = D("Account");
                 $userAccount = I('post.userInfo');
                 $pwd = I('post.password');
-                $email = $accountModel->getField('email', true);
-                $username = $accountModel->getField('username', true);
+                $email = $accountModel->getField('email', true);//get array of email address
+                $username = $accountModel->getField('username', true);//get array of username
                 $checkSQL['email'] = $userAccount;
                 $checkSql['username'] = $userAccount;
-                $password = $accountModel->where($checkSQL)->getField('password', true);
-                $EmailPwd = implode(" ", $password);
-                $pass = $accountModel->where($checkSql)->getField('password', true);
-                $userPwd = implode(" ", $pass);
+                $password = $accountModel->where($checkSQL)->getField('password', true);//get that email's password when email matched
+                $EmailPwd = implode(" ", $password);//array to string
+                $pass = $accountModel->where($checkSql)->getField('password', true);//get that name's password when name matched
+                $userPwd = implode(" ", $pass);//array to string
                 $pwd = md5($pwd);
                 if (in_array($userAccount, $email) || in_array($userAccount, $username)) {
                     if ($pwd == $EmailPwd || $pwd == $userPwd) {
