@@ -40,7 +40,6 @@ $this->params['breadcrumbs'][] = $this->title;
         <p>
             Don't have account? <a href="/index.php?r=account/register">Sign up</a>&emsp;
             <a href ="/index.php?r=account/seekpass">Forget password?</a>
-            <a href ="/index.php?r=account/changepass">Forget password?</a>
         </p>
 
     </div>
