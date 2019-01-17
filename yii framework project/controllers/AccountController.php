@@ -150,7 +150,8 @@ class AccountController extends Controller
         $model = new Account();
         $model->scenario = 'signUp';//rules scenario
         if ($model->load(Yii::$app->request->post()) && $model->signup()) {
-            return $this->redirect(['welcome']);
+//            return $this->redirect(['welcome']);
+			return $this->render('welcome', ['model' => $model]);
         } else {
             return $this->render('register', ['model' => $model]);
         }
@@ -278,7 +279,8 @@ class AccountController extends Controller
         $model = new Account();
         $model->scenario = 'change';
         if ($model->load(Yii::$app->request->post()) && $model->updatePassword()) {
-            return $this->redirect(['welcome']);
+//            return $this->redirect(['welcome']);
+			return $this->render('welcome', ['model' => $model]);
         } else {
             return $this->render('changePass', ['model' => $model]);
         }

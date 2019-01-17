@@ -150,6 +150,7 @@ class Account extends \yii\db\ActiveRecord implements IdentityInterface
                 $model::updateAll(['password' => $model->password_check], ['username' => $this->username]);
             }
         }
+		return true;
     }
 
     /*
