@@ -16,10 +16,12 @@ class LoginForm extends Model
 {
     public $username;
     public $password;
+    public $email;
     public $rememberMe = true;
-
+    private $_userEmail = false;
     private $_user = false;
-
+    public $captcha = null;
+    public $verifyCode;
 
     /**
      * @return array the validation rules.
@@ -33,6 +35,8 @@ class LoginForm extends Model
             ['rememberMe', 'boolean'],
             // password is validated by validatePassword()
             ['password', 'validatePassword'],
+            ['verifyCode','captcha'],
+//            captchaAction' => 'Model/Controller/captcha'
         ];
     }
 
@@ -47,9 +51,11 @@ class LoginForm extends Model
     {
         if (!$this->hasErrors()) {
             $user = $this->getUser();
-
+            $userEmail = $this->getUserEmail();
             if (!$user || !$user->validatePassword($this->password)) {
                 $this->addError($attribute, 'Incorrect username or password.');
+//            if (!$userEmail || !$userEmail->validatePassword($this->password)) {
+//                $this->addError($attribute, 'Incorrect username or password.');
             }
         }
     }
@@ -83,4 +89,16 @@ class LoginForm extends Model
         return $this->_user;
     }
 
+    /**
+     * Finds user by [[username(email)]]
+     *
+     * @return Account|null
+     */
+    public function getUserEmail()
+    {
+        if ($this->_userEmail === false) {
+            $this->_userEmail = Account::fingdByEmail($this->email);
+        }
+        return $this->_userEmail;
+    }
 }

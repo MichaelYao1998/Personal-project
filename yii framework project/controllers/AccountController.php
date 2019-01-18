@@ -34,6 +34,28 @@ class AccountController extends Controller
         ];
     }
 
+    /*
+     * security code related action
+     */
+    public function actions()
+    {
+        return [
+            'error' => [
+                'class' => 'yii\web\ErrorAction',
+            ],
+            'captcha' => [
+                'class' => 'yii\captcha\CaptchaAction',
+                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
+                'maxLength' => 4,
+                'minLength' => 4,
+                'padding' => 5,
+                'height' => 39,
+                'width' => 100,
+                'offset' => 3,
+            ],
+        ];
+    }
+
     /**
      * Lists all Account models.
      * @return mixed
@@ -151,7 +173,7 @@ class AccountController extends Controller
         $model->scenario = 'signUp';//rules scenario
         if ($model->load(Yii::$app->request->post()) && $model->signup()) {
 //            return $this->redirect(['welcome']);
-			return $this->render('welcome', ['model' => $model]);
+            return $this->render('welcome', ['model' => $model]);
         } else {
             return $this->render('register', ['model' => $model]);
         }
@@ -170,7 +192,7 @@ class AccountController extends Controller
 
     public function actionWelcome()
     {
-        $model = new LoginForm();
+        $model = new Account();
         return $this->render('welcome', ['model' => $model]);
 
     }
@@ -268,7 +290,8 @@ class AccountController extends Controller
             //调用model
             if ($model->seekPass($post)) {
                 Yii::$app->session->setFlash('info', 'Email sent successully, please check.');
-//                Yii::$app->session->setFlash('info', "If don;t find the email, please check spam.");
+                Yii::$app->session->setFlash('msg', "If you don't find the email, please check spam.");
+//                echo " If you don't find the email, please check spam.";
             }
         }
         return $this->render('seekPass', ['model' => $model]);
@@ -280,7 +303,7 @@ class AccountController extends Controller
         $model->scenario = 'change';
         if ($model->load(Yii::$app->request->post()) && $model->updatePassword()) {
 //            return $this->redirect(['welcome']);
-			return $this->render('welcome', ['model' => $model]);
+            return $this->render('welcome', ['model' => $model]);
         } else {
             return $this->render('changePass', ['model' => $model]);
         }

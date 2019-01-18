@@ -8,7 +8,7 @@
 
 use yii\helpers\html;
 use yii\bootstrap\ActiveForm;
-
+use \yii\captcha\Captcha;
 
 $this->title = 'Sign in';
 $this->params['breadcrumbs'][] = ['label' => 'registration', 'url' => ['login']];
@@ -30,6 +30,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <?= $form->field($model, 'username')->textInput(['placeholder' => Yii::t('app', 'Username or Email')]); ?>
 <?= $form->field($model, 'password')->passwordInput(); ?>
+<?= $form->field($model,'verifyCode')->widget(yii\captcha\Captcha::class)?>
+<!-- security code: https://www.yii-china.com/post/detail/12.html-->
 <?= $form->field($model, 'rememberMe')->checkbox([
     'template' => "<div class=\"col-lg-offset-1 col-lg-3\">{input} {label}</div>\n<div class=\"col-lg-8\">{error}</div>",
 ]) ?>
@@ -39,7 +41,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= HTML::submitButton('Sign in', ['class' => 'btn btn-primary']) ?>
         <p>
             Don't have account? <a href="/index.php?r=account/register">Sign up</a>&emsp;
-            <a href ="/index.php?r=account/seekpass">Forget password?</a>
+            <a href="/index.php?r=account/seekpass">Find back password</a>
         </p>
 
     </div>

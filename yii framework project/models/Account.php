@@ -112,6 +112,10 @@ class Account extends \yii\db\ActiveRecord implements IdentityInterface
         return static::findOne(['username' => $username]);
     }
 
+    public static function fingdByEmail($email)
+    {
+        return static::findOne(['email' => $email]);
+    }
 
     public function validatePassword($password)
     {
@@ -138,19 +142,18 @@ class Account extends \yii\db\ActiveRecord implements IdentityInterface
     {
         if (!$this->validate()) {
             return null;
-        } else {
-            $model = new Account();
-            $model->password = $this->password;
-            $model->password_check = $this->password_check;
-            if ($this->password == $this->password_check) {
-                $model->password = md5($model->password);
-                $model->password_check = md5($model->password_check);
-				//update password = $model->password where username = $this->username
-                $model::updateAll(['password' => $model->password], ['username' => $this->username]);
-                $model::updateAll(['password' => $model->password_check], ['username' => $this->username]);
-            }
         }
-		return true;
+        $model = new Account();
+        $model->password = $this->password;
+        $model->password_check = $this->password_check;
+        if ($this->password == $this->password_check) {
+            $model->password = md5($model->password);
+            $model->password_check = md5($model->password_check);
+            //update password = $model->password where username = $this->username
+            $model::updateAll(['password' => $model->password], ['username' => $this->username]);
+            $model::updateAll(['password' => $model->password_check], ['username' => $this->username]);
+        }
+        return true;
     }
 
     /*
