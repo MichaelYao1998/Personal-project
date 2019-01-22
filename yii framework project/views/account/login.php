@@ -9,16 +9,19 @@
 use yii\helpers\html;
 use yii\bootstrap\ActiveForm;
 use \yii\captcha\Captcha;
+use app\assets\AppAsset;
 
 $this->title = 'Sign in';
 $this->params['breadcrumbs'][] = ['label' => 'registration', 'url' => ['login']];
 $this->params['breadcrumbs'][] = $this->title;
+//how to import js file: https://www.cnblogs.com/lccjob/p/5714583.html
+AppAsset::addScript($this, Yii::$app->request->baseUrl . 'web/JavaScript/function.js');
 ?>
 
 <head>
     <title><?= HTML::encode($this->title) ?></title>
 </head>
-<body>
+<body onload=preFilled()>
 <?php $form = ActiveForm::begin([
     'id' => 'Account',
     'layout' => 'horizontal',
@@ -28,13 +31,12 @@ $this->params['breadcrumbs'][] = $this->title;
     ],
 ]); ?>
 
-<?= $form->field($model, 'username')->textInput(['placeholder' => Yii::t('app', 'Username or Email')]); ?>
-<?= $form->field($model, 'password')->passwordInput(); ?>
-<?= $form->field($model,'verifyCode')->widget(yii\captcha\Captcha::class)?>
+<?= $form->field($model, 'username')->textInput(['placeholder'=>Yii::t('app','Username or Email'),'id' => 'name']); ?>
+<?= $form->field($model, 'password')->passwordInput(['id'=>'password']); ?>
 <!-- security code: https://www.yii-china.com/post/detail/12.html-->
-<?= $form->field($model, 'rememberMe')->checkbox([
-    'template' => "<div class=\"col-lg-offset-1 col-lg-3\">{input} {label}</div>\n<div class=\"col-lg-8\">{error}</div>",
-]) ?>
+<?= $form->field($model, 'verifyCode')->widget(Captcha::class) ?>
+<label for="RememberMe"></label><input type="checkbox" name="Remember me" id="RememberMe" onclick=storeInfo()>Remember me<br><br>
+
 
 <div class="form-group">
     <div class="col-lg-offset-1 col-lg-11">

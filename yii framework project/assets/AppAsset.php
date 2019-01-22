@@ -23,9 +23,15 @@ class AppAsset extends AssetBundle
         'css/site.css',
     ];
     public $js = [
+        'JavaScript/function.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
     ];
+
+    public static function addScript($view, $jsFile)
+    {
+        $view->registerJsFile($jsFile, [AppAsset::class, 'depends' => 'app\assets\AppAsset']);
+    }
 }

@@ -3867,7 +3867,7 @@ function internalData( elem, name, data, pvt /* Internal Use Only */ ) {
 	if ( !cache[ id ] ) {
 
 		// Avoid exposing jQuery metadata on plain JS objects when the object
-		// is serialized using JSON.stringify
+		// is serialized using JavaScript.stringify
 		cache[ id ] = isNode ? {} : { toJSON: jQuery.noop };
 	}
 
@@ -9003,7 +9003,7 @@ var rvalidtokens = /(,)|(\[|{)|(}|])|"(?:[^"\\\r\n]|\\["\\\/bfnrt]|\\u[\da-fA-F]
 
 jQuery.parseJSON = function( data ) {
 
-	// Attempt to parse using the native JSON parser first
+	// Attempt to parse using the native JavaScript parser first
 	if ( window.JSON && window.JSON.parse ) {
 
 		// Support: Android 2.3
@@ -9042,7 +9042,7 @@ jQuery.parseJSON = function( data ) {
 		return "";
 	} ) ) ?
 		( Function( "return " + str ) )() :
-		jQuery.error( "Invalid JSON: " + data );
+		jQuery.error( "Invalid JavaScript: " + data );
 };
 
 

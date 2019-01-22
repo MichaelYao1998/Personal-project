@@ -128,7 +128,7 @@ window.yii = (function ($) {
          * will be assigned to `window.location`.
          *
          * Starting from version 2.0.3, the `data-params` attribute is also recognized when you specify
-         * `data-method`. The value of `data-params` should be a JSON representation of the data (name-value pairs)
+         * `data-method`. The value of `data-params` should be a JavaScript representation of the data (name-value pairs)
          * that should be submitted as hidden inputs. For example, you may use the following code to generate
          * such a link:
          *

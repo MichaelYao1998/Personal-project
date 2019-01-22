@@ -36,7 +36,6 @@ class LoginForm extends Model
             // password is validated by validatePassword()
             ['password', 'validatePassword'],
             ['verifyCode','captcha'],
-//            captchaAction' => 'Model/Controller/captcha'
         ];
     }
 
